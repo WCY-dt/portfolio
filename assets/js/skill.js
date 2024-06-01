@@ -40,6 +40,7 @@ skills.forEach(({ category, items }, index) => {
         if (paint_white.includes(item)) {
             img.classList.add('white-img')
         }
+        img.loading = 'lazy'
         li.appendChild(img)
         ul.appendChild(li)
     })

@@ -1,0 +1,14 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-desc {
+    display: none;
+}
+
+.project:hover .project-desc {
+    display: block;
+}

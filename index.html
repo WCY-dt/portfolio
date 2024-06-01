@@ -16,17 +16,17 @@
 
     <meta property="og:title" content="Homepage of Ch3nyang">
     <meta property="og:description" content="Portfolio of Ch3nyang">
-    <meta property="og:image" content="./img/ogimage.png">
-    <meta name="twitter:card" content="./img/twittercard.png">
+    <meta property="og:image" content="./assets/img/ogimage.png">
+    <meta name="twitter:card" content="./assets/img/twittercard.png">
 
-    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
 <body>
-    <div class="home">
+    <header class="home">
         <div class="left">
             <div class="left-square">
                 <div class="square-content">
@@ -39,64 +39,110 @@
             <div class="right-square">
                 <div class="right-title">yang</div>
                 <div class="star">
-                    <img src="./icons/asterisk.svg" alt="Asterisk">
+                    <img src="./assets/icons/asterisk.svg" alt="Asterisk" loading="lazy">
                 </div>
             </div>
         </div>
-    </div>
-    <div class="info">
+    </header>
+    <main class="info">
         <div class="smile">
-            <img src="./icons/smile.svg" alt="Smile">
+            <img src="./assets/icons/smile.svg" alt="Smile" loading="lazy">
         </div>
         <div class="info-content">
             <div class="info-title">Hi there!</div>
             <div class="info-text">I'm Ch3nyang, a <u>fullstack developer</u> hailing from Southeast University, China, currently pursuing a Master's degree in Cybersecurity. I have a passion for programming, enjoy writing, and love to share.</div>
             <div class="info-text">Hope you enjoy yourself here!</div>
         </div>
-    </div>
-    <div class="skill">
+    </main>
+    <section class="skill">
         <h2>skill</h2>
-    </div>
+    </section>
     <h2>link</h2>
-    <div class="link">
+    <nav class="link">
         <a class="link-cluster cluster1" href="https://blog.ch3nyang.top">
             <div class="img">
-                <img src="./icons/hurricane.svg" alt="Hurricane">
+                <img src="./assets/icons/hurricane.svg" alt="Hurricane" loading="lazy">
             </div>
             <div class="link-title">blog</div>
             <div class="link-text">I have written blogs for years. Here you can find my notes on programming, cybersecurity, mathematics, signal processing, and life. Enjoy!</div>
         </a>
         <a class="link-cluster cluster2" href="https://mind.ch3nyang.top">
             <div class="img">
-                <img src="./icons/bubbles.svg" alt="Bubbles">
+                <img src="./assets/icons/bubbles.svg" alt="Bubbles" loading="lazy">
             </div>
             <div class="link-title">mindclip</div>
             <div class="link-text">There are so many techical articles, opinions, and thoughts on the Internet. Here I collect some interesting ones to share with you.</div>
         </a>
-    </div>
-    <div class="footer">
+    </nav>
+<!--
+    <section class="project">
+        <h2>project</h2>
+        <div class="project-content">
+            <div class="project-cluster">
+                <div class="project-info">
+                    <span>Project 1</span>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+                <p class="project-desc">
+                    A simple blog system based on Flask. It supports markdown and code highlighting. The backend is implemented with MySQL.
+                </p>
+            </div>
+            <div class="project-cluster">
+                <div class="project-info">
+                    <span>Project 2</span>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+                <p class="project-desc">
+                    A simple blog system based on Flask. It supports markdown and code highlighting. The backend is implemented with SQLite.
+                </p>
+            </div>
+            <div class="project-cluster">
+                <div class="project-info">
+                    <span>Project 3</span>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                <p class="project-desc">
+                    A simple blog system based on Flask. It supports markdown and code highlighting. The backend is implemented with PostgreSQL.
+                </p>
+            </div>        
+        </div>
+    </section>
+-->
+    <footer class="footer">
         <div class="job">
             available for hire currently!
         </div>
         <ul>
             <li><a href="https://github.com/WCY-dt">
-                <img src="./icons/github.svg" alt="GitHub">
+                <img src="./assets/icons/github.svg" alt="GitHub" loading="lazy">
                 <span>GitHub</span>
             </a></li>
             <li><a href="mailto:mail@ch3nyang.top">
-                <img src="./icons/email.svg" alt="Email">
+                <img src="./assets/icons/email.svg" alt="Email" loading="lazy">
                 <span>Email</span>
             </a></li>
             <li><a href="https://twitter.com/ch3nyang">
-                <img src="./icons/twitter.svg" alt="Twitter">
+                <img src="./assets/icons/twitter.svg" alt="Twitter" loading="lazy">
                 <span>Twitter</span>
             </a></li>
         </ul>
         <div class="footer-text">© 2024 Ch3nyang. All rights reserved.</div>
-    </div>
+    </footer>
 </body>
 
-<script src="./js/skill.js"></script>
-<script src="./js/link.js"></script>
+<script src="./assets/js/skill.js"></script>
+<script src="./assets/js/link.js"></script>
 
 </html>
