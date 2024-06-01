@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('./home.css');
+@import url('./info.css');
+@import url('./skill.css');
+@import url('./link.css');
+@import url('./footer.css');
+
+:root {
+    --primary-color: hsl(225, 100%, 50%);
+    --secondary-color: hsl(200, 100%, 90%);
+    --black-color: hsl(0, 0%, 0%);
+    --white-color: hsl(0, 0%, 100%);
+    --black-shadow-primary-color: hsla(0, 0%, 0%, 0.4);
+    --black-shadow-secondary-color: hsla(0, 0%, 0%, 0.2);
+    --blue-shadow-color: hsl(225, 100%, 70%);
+    --primary-font: "Orbitron", sans-serif;
+    --secondary-font: "Lora", serif;
+
+    font-size: 16px;
+    font-family: var(--secondary-font);
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--white-color);
+}
+
+h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    margin: 4rem auto 1rem auto;
+}
+
+h2::before,
+h2::after {
+    content: "";
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--primary-color);
+    transition: background-color 0.25s ease-in-out;
+}
+
+h2::before {
+    position: absolute;
+    top: 0.25rem;
+    left: -3rem;
+}
+
+h2::after {
+    position: absolute;
+    top: 0.25rem;
+    right: -2.5rem;
+}
+
+h2:hover::before,
+h2:hover::after {
+    background-color: var(--black-color);
+}
+
+@keyframes body-color {
+    0% {
+        background-color: var(--white-color);
+    }
+
+    50% {
+        background-color: var(--secondary-color);
+    }
+
+    750% {
+        background-color: var(--secondary-color);
+    }
+
+    100% {
+        background-color: var(--white-color);
+    }
+}
+
+body {
+    animation: body-color linear forwards;
+    animation-timeline: scroll();
+    animation-range: 50vh 250vh;
+}
