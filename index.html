@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="application-name" content="Ch3nyang Homepage">
-    <meta name="theme-color" content="#0040ff">
+    <meta name="msapplication-TileColor" content="#0040ff">
 
     <meta property="og:title" content="Homepage of Ch3nyang">
     <meta property="og:description" content="Portfolio of Ch3nyang">
@@ -22,11 +22,14 @@
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
 
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
 <body>
-    <header class="home">
+    <header class="home" id="home">
         <div class="left">
             <div class="left-square">
                 <div class="square-content">
@@ -39,14 +42,14 @@
             <div class="right-square">
                 <div class="right-title">yang</div>
                 <div class="star">
-                    <img src="./assets/icons/asterisk.svg" alt="Asterisk" loading="lazy">
+                    <img src="./assets/icons/asterisk.svg" alt="Asterisk" loading="eager">
                 </div>
             </div>
         </div>
     </header>
-    <main class="info">
+    <main class="info" id="info">
         <div class="smile">
-            <img src="./assets/icons/smile.svg" alt="Smile" loading="lazy">
+            <img src="./assets/icons/smile.svg" alt="Smile" loading="eager">
         </div>
         <div class="info-content">
             <div class="info-title">Hi there!</div>
@@ -54,88 +57,56 @@
             <div class="info-text">Hope you enjoy yourself here!</div>
         </div>
     </main>
-    <section class="skill">
+    <section class="skill" id="skill">
         <h2>skill</h2>
     </section>
-    <h2>link</h2>
-    <nav class="link">
-        <a class="link-cluster cluster1" href="https://blog.ch3nyang.top">
-            <div class="img">
-                <img src="./assets/icons/hurricane.svg" alt="Hurricane" loading="lazy">
-            </div>
-            <div class="link-title">blog</div>
-            <div class="link-text">I have written blogs for years. Here you can find my notes on programming, cybersecurity, mathematics, signal processing, and life. Enjoy!</div>
-        </a>
-        <a class="link-cluster cluster2" href="https://mind.ch3nyang.top">
-            <div class="img">
-                <img src="./assets/icons/bubbles.svg" alt="Bubbles" loading="lazy">
-            </div>
-            <div class="link-title">mindclip</div>
-            <div class="link-text">There are so many techical articles, opinions, and thoughts on the Internet. Here I collect some interesting ones to share with you.</div>
-        </a>
-    </nav>
-<!--
-    <section class="project">
-        <h2>project</h2>
-        <div class="project-content">
-            <div class="project-cluster">
-                <div class="project-info">
-                    <span>Project 1</span>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>MySQL</span>
-                    </div>
+    <section class="link" id="link">
+        <h2>link</h2>
+        <div class="link-content">
+            <a class="link-cluster cluster1" href="https://blog.ch3nyang.top">
+                <div class="img">
+                    <img src="./assets/icons/hurricane.svg" alt="Hurricane" loading="lazy">
                 </div>
-                <p class="project-desc">
-                    A simple blog system based on Flask. It supports markdown and code highlighting. The backend is implemented with MySQL.
-                </p>
-            </div>
-            <div class="project-cluster">
-                <div class="project-info">
-                    <span>Project 2</span>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>SQLite</span>
-                    </div>
+                <div class="link-title">blog</div>
+                <div class="link-text">I have written blogs for years. Here you can find my notes on programming, cybersecurity, mathematics, signal processing, and life. Enjoy!</div>
+            </a>
+            <a class="link-cluster cluster2" href="https://mind.ch3nyang.top">
+                <div class="img">
+                    <img src="./assets/icons/bubbles.svg" alt="Bubbles" loading="lazy">
                 </div>
-                <p class="project-desc">
-                    A simple blog system based on Flask. It supports markdown and code highlighting. The backend is implemented with SQLite.
-                </p>
-            </div>
-            <div class="project-cluster">
-                <div class="project-info">
-                    <span>Project 3</span>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                </div>
-                <p class="project-desc">
-                    A simple blog system based on Flask. It supports markdown and code highlighting. The backend is implemented with PostgreSQL.
-                </p>
-            </div>        
+                <div class="link-title">mindclip</div>
+                <div class="link-text">There are so many techical articles, opinions, and thoughts on the Internet. Here I collect some interesting ones to share with you.</div>
+            </a>
         </div>
     </section>
+<!--
+    <section class="project" id="project">
+        <h2>project</h2>
+        <dl class="project-content" id="project-content"></dl>
+        <button class="material-symbols-sharp project-left" id="project-left">
+            arrow_back
+        </button>
+        <button class="material-symbols-sharp project-right" id="project-right">
+            arrow_forward
+        </button>
+    </section>
 -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="job">
             available for hire currently!
         </div>
         <ul>
             <li><a href="https://github.com/WCY-dt">
-                <img src="./assets/icons/github.svg" alt="GitHub" loading="lazy">
-                <span>GitHub</span>
+                <img src="./assets/icons/github.svg" alt="GitHub icon" loading="lazy">
+                <figcaption>GitHub</figcaption>
             </a></li>
             <li><a href="mailto:mail@ch3nyang.top">
-                <img src="./assets/icons/email.svg" alt="Email" loading="lazy">
-                <span>Email</span>
+                <img src="./assets/icons/email.svg" alt="Email icon" loading="lazy">
+                <figcaption>Email</figcaption>
             </a></li>
             <li><a href="https://twitter.com/ch3nyang">
-                <img src="./assets/icons/twitter.svg" alt="Twitter" loading="lazy">
-                <span>Twitter</span>
+                <img src="./assets/icons/twitter.svg" alt="Twitter icon" loading="lazy">
+                <figcaption>Twitter</figcaption>
             </a></li>
         </ul>
         <div class="footer-text">© 2024 Ch3nyang. All rights reserved.</div>
@@ -144,5 +115,6 @@
 
 <script src="./assets/js/skill.js"></script>
 <script src="./assets/js/link.js"></script>
+<!--<script src="./assets/js/project.js"></script>-->
 
 </html>
