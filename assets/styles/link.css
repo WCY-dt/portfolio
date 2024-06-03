@@ -21,7 +21,9 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
     gap: 1rem 2rem;
+    /*
     border: 0.25rem solid var(--primary-color);
+    */
     max-width: 31.25rem;
     padding: 2rem;
     box-shadow: 0 0 0.5rem var(--black-shadow-primary-color);

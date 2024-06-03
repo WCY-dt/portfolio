@@ -1,6 +1,7 @@
 let dataHTMLs = []
 const container = document.getElementById('project-content');
 let currentDataIndex = 2
+let totDataNum = 0
 
 function getIndexDelta(idx, delta) {
     return (idx + delta + totDataNum) % totDataNum
@@ -13,10 +14,10 @@ fetch('./assets/data/project.json')
             const div = document.createElement('div')
             div.classList.add('project-item')
             div.innerHTML = `
-                <dt class="project-info">
+                <div class="project-info">
                     <span>${data.title}</span>
-                </dt>
-                <dd class="project-desc">${data.description}</dd>
+                </div>
+                <div class="project-desc">${data.description}</div>
                 <menu class="project-link">
                     ${!data.link ? `` : `
                         <a href="${data.link}" target="_blank">
@@ -42,8 +43,6 @@ fetch('./assets/data/project.json')
         totDataNum = dataHTMLs.length
         currentDataIndex = 2
 
-        const container = document.getElementById('project-content');
-
         dataHTMLs.slice(getIndexDelta(currentDataIndex, -2), getIndexDelta(currentDataIndex, 2) + 1).forEach(dataHTML => {
             container.appendChild(dataHTML)
         })
@@ -56,9 +55,9 @@ fetch('./assets/data/project.json')
 
 function moveRight() {
     lastElementIdx = getIndexDelta(currentDataIndex, -3)
-    container.insertBefore(dataHTMLs[lastElementIdx], container.children[0])
-    container.removeChild(container.children[container.children.length - 1])
     currentDataIndex = getIndexDelta(currentDataIndex, -1)
+    container.removeChild(container.children[container.children.length - 1])
+    container.insertBefore(dataHTMLs[lastElementIdx], container.children[0])
 
     container.scrollTo({
         left: container.scrollWidth / 2 - container.clientWidth / 2,
@@ -68,9 +67,9 @@ function moveRight() {
 
 function moveLeft() {
     nextElementIdx = getIndexDelta(currentDataIndex, 3)
-    container.appendChild(dataHTMLs[nextElementIdx])
-    container.removeChild(container.children[0])
     currentDataIndex = getIndexDelta(currentDataIndex, 1)
+    container.removeChild(container.children[0])
+    container.appendChild(dataHTMLs[nextElementIdx])
 
     container.scrollTo({
         left: container.scrollWidth / 2 - container.clientWidth / 2,
