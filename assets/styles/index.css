@@ -4,8 +4,10 @@
 @import url('./info.css');
 @import url('./skill.css');
 @import url('./link.css');
-/* @import url('./project.css'); */
+@import url('./project.css');
+@import url('./dashboard.css');
 @import url('./footer.css');
+@import url('./menu.css');
 
 :root {
     --primary-color: hsl(225, 100%, 50%);

@@ -79,10 +79,44 @@
             </a>
         </div>
     </section>
-<!--
+    <section class="dashboard" id="dashboard">
+        <h2>dashboard</h2>
+        <div class="dashboard-content">
+            <div class="dashboard-item" id="commit">
+                <span class="material-symbols-sharp icon">commit</span>
+                <number>---</number>
+                <span class="dashboard-text">commits this month</span>
+            </div>
+            <div class="dashboard-item" id="pr">
+                <span class="material-symbols-sharp icon">merge</span>
+                <number>---</number>
+                <span class="dashboard-text">pull requests this month</span>
+            </div>
+            <div class="dashboard-item" id="issue">
+                <span class="material-symbols-sharp icon">chat</span>
+                <number>---</number>
+                <span class="dashboard-text">issues this month</span>
+            </div>
+            <div class="dashboard-item" id="follower">
+                <span class="material-symbols-sharp icon">group</span>
+                <number>---</number>
+                <span class="dashboard-text">followers in total</span>
+            </div>
+            <div class="dashboard-item" id="star">
+                <span class="material-symbols-sharp icon">star</span>
+                <number>---</number>
+                <span class="dashboard-text">stars in total</span>
+            </div>
+            <div class="dashboard-item" id="fork">
+                <span class="material-symbols-sharp icon">fork_right</span>
+                <number>---</number>
+                <span class="dashboard-text">forks in total</span>
+            </div>
+        </div>
+    </section>
     <section class="project" id="project">
         <h2>project</h2>
-        <dl class="project-content" id="project-content"></dl>
+        <div class="project-content" id="project-content"></div>
         <button class="material-symbols-sharp project-left" id="project-left">
             arrow_back
         </button>
@@ -90,7 +124,6 @@
             arrow_forward
         </button>
     </section>
--->
     <footer class="footer" id="footer">
         <div class="job">
             available for hire currently!
@@ -109,12 +142,30 @@
                 <figcaption>Twitter</figcaption>
             </a></li>
         </ul>
-        <div class="footer-text">© 2024 Ch3nyang. All rights reserved.</div>
+        <div class="footer-text">
+            © 2024 Ch3nyang. All rights reserved.<br/>
+            Made with vanilla JS.
+        </div>
     </footer>
+<!--
+    <menu class="menu" id="menu">
+        <ul>
+            <li><a href="#home" title="Home"></a></li>
+            <li><a href="#info" title="Info"></a></li>
+            <li><a href="#skill" title="Skill"></a></li>
+            <li><a href="#link" title="Link"></a></li>
+            <li><a href="#project" title="Project"></a></li>
+            <li><a href="#footer" title="Contact"></a></li>
+        </ul>
+        <hr>
+    </menu>
+-->
 </body>
 
 <script src="./assets/js/skill.js"></script>
 <script src="./assets/js/link.js"></script>
-<!--<script src="./assets/js/project.js"></script>-->
+<script src="./assets/js/project.js"></script>
+<script src="./assets/js/dashboard.js"></script>
+<script src="./assets/js/menu.js"></script>
 
 </html>
