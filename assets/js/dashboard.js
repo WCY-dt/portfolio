@@ -4,7 +4,7 @@ async function getAllEvents(username) {
     let page = 1;
     let events = [];
 
-    while (true) {
+    while (page <= 3) {
         const url = `https://api.github.com/users/${username}/events/public?per_page=100&page=${page}`;
 
         try {
