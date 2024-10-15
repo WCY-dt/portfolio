@@ -1,4 +1,4 @@
-var blog = document.querySelector('.cluster1 .link-title');
+var blog = document.querySelector('.link-cluster .link-title');
 var originalContent1 = blog.textContent;
 var originalFontSize1 = blog.style.fontSize;
 blog.addEventListener('mouseover', function() {
@@ -12,16 +12,34 @@ blog.addEventListener('mouseout', function() {
     blog.style.textDecoration = 'none';
 });
 
-var mind = document.querySelector('.cluster2 .link-title');
-var originalContent2 = mind.textContent;
-var originalFontSize2 = mind.style.fontSize;
-mind.addEventListener('mouseover', function() {
-    mind.textContent = 'mind.ch3nyang.top';
-    mind.style.fontSize = '1.5em';
-    mind.style.textDecoration = 'underline';
-});
-mind.addEventListener('mouseout', function() {
-    mind.textContent = originalContent2;
-    mind.style.fontSize = originalFontSize2;
-    mind.style.textDecoration = 'none';
-});
+async function getRecnetBlogs() {
+    const feed = "https://blog.ch3nyang.top/feed.xml";
+    const response = await fetch(feed);
+    const text = await response.text();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, "text/xml");
+    const items = xml.querySelectorAll("entry");
+    const blogs = [];
+    items.forEach(item => {
+        const title = item.querySelector("title").textContent;
+        const link = item.querySelector("link").getAttribute("href");
+        const date = new Date(item.querySelector("published").textContent);
+        const formattedDate = date.toLocaleDateString('en-CA'); // 'en-CA' gives YYYY-MM-DD format
+        blogs.push({ title, link, date: formattedDate.replace(/-/g, '/') }); // Replace '-' with '/'
+    });
+    return blogs.slice(0, 6);
+}
+
+const blogCluster = document.querySelector("#blog-cluster")
+
+getRecnetBlogs().then(blogs => {
+    blogs.forEach(blog => {
+        const blogElement = document.createElement("a")
+        blogElement.classList.add("blog-item")
+        blogElement.href = blog.link
+        blogElement.innerHTML = `
+            <span class="blog-title">${blog.title}</span>&nbsp;&nbsp;&nbsp;<span class="blog-date">(${blog.date})</span>
+        `
+        blogCluster.appendChild(blogElement)
+    })
+})

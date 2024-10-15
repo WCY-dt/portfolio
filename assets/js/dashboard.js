@@ -27,8 +27,6 @@ async function getAllEvents(username) {
         }
     }
 
-    console.log(events);
-
     return events;
 }
 

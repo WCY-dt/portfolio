@@ -92,7 +92,6 @@
 .star img {
     width: 16rem;
     height: 16rem;
-    filter: invert(1) grayscale(1) hue-rotate(0deg);
 }
 
 @keyframes home-scroll {

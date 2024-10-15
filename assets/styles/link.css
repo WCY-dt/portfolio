@@ -9,14 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 1rem;
+    gap: 3rem;
     margin: 2rem 2rem 0 2rem;
 }
 
 .link-cluster {
     text-decoration: none;
-    color: var(--primary-color);
-    background-color: var(--tertiary-color);
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
@@ -28,16 +26,13 @@
     padding: 2rem;
     box-shadow: 0 0 0.5rem var(--black-shadow-primary-color);
     transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 .link-cluster:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0 0 2rem var(--black-shadow-secondary-color);
-}
-
-.link .cluster1 {
-    background-color: var(--primary-color);
-    color: var(--white-color);
 }
 
 .link-cluster .img {
@@ -53,10 +48,6 @@
     height: 8rem;
     width: 8rem;
     transition: transform 0.25s ease-in-out;
-}
-
-.cluster1 .img img {
-    filter: invert(1);
 }
 
 .link-cluster .link-title {
@@ -90,4 +81,67 @@
     .link-cluster {
         grid-template-columns: auto;
     }
+}
+
+.blog-cluster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.blog-cluster .blog-item {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.blog-cluster .blog-item::before {
+    content: '\00BB';
+    font-size: 3rem;
+    position: absolute;
+    left: -1rem;
+    top: -0.2rem;
+    color: var(--fac-color);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.blog-cluster .blog-item:hover::before {
+    opacity: 1;
+    transform: translateX(-1rem);
+}
+
+
+.blog-cluster .blog-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.blog-cluster .blog-item:hover {
+    position: relative;
+    transform: translateX(1.5rem);
+}
+
+.blog-cluster .blog-item:hover::after {
+    background-color: var(--fac-color);
+}
+
+.blog-cluster .blog-item .blog-title {
+    font-weight: 900;
+    font-family: var(--chinese-font);
+}
+
+.blog-cluster .blog-item .blog-date {
+    font-weight: 100;
 }

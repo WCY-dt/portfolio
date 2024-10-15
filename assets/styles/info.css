@@ -44,7 +44,7 @@
 .info-text u:hover {
     background-color: var(--primary-color);
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--fac-color);
 }
 
 @keyframes smile-scroll {

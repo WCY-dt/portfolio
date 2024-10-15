@@ -9,7 +9,7 @@
 @import url('./footer.css');
 @import url('./menu.css');
 
-:root {
+/* :root {
     --primary-color: hsl(225, 100%, 50%);
     --secondary-color: hsl(200, 100%, 90%);
     --tertiary-color: hsl(195, 100%, 95%);
@@ -20,6 +20,29 @@
     --blue-shadow-color: hsl(225, 100%, 70%);
     --primary-font: "Orbitron", sans-serif;
     --secondary-font: "Lora", serif;
+
+    font-size: 16px;
+    font-family: var(--secondary-font);
+
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+} */
+
+:root {
+    --primary-color: hsl(163, 100%, 21%);
+    --secondary-color: hsl(60, 100%, 98%);
+    --tertiary-color: hsl(52, 100%, 89%);
+    --quaternary-color: hsl(164, 30%, 64%);
+    --fac-color: hsl(53, 100%, 64%);
+    --black-color: hsl(0, 0%, 0%);
+    --white-color: hsl(60, 100%, 98%);
+    --black-shadow-primary-color: hsla(0, 0%, 0%, 0.4);
+    --black-shadow-secondary-color: hsla(0, 0%, 0%, 0.2);
+    --blue-shadow-color: hsl(52, 100%, 89%);
+    --primary-font: "Orbitron", sans-serif;
+    --secondary-font: "Lora", serif;
+    --chinese-font: "Orbitron", "微软雅黑", sans-serif;
 
     font-size: 16px;
     font-family: var(--secondary-font);
@@ -95,7 +118,7 @@ h2::after {
 
 h2:hover::before,
 h2:hover::after {
-    background-color: var(--black-color);
+    background-color: var(--fac-color);
 }
 
 @keyframes body-color {

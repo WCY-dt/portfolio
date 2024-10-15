@@ -59,6 +59,7 @@
     font-family: var(--primary-font);
     font-size: 2rem;
     font-weight: 700;
+    text-align: center;
     color: var(--primary-color);
     padding: 1rem 0;
     text-transform: uppercase;
@@ -69,6 +70,29 @@
     background-color: var(--primary-color);
     color: var(--white-color);
     font-weight: 900;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.project-tech span {
+    padding: 0 0.4rem;
+    line-height: 1.5rem;
+}
+
+.project-tech span:not(:last-child) {
+    border-right: 2px solid var(--quaternary-color);
 }
 
 .project-desc {
@@ -102,7 +126,7 @@
 .project-link a {
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--black-color);
+    color: var(--primary-color);
     text-decoration: underline;
     transition: color 0.25s ease-in-out;
 }

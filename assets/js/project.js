@@ -17,12 +17,15 @@ fetch('./assets/data/project.json')
                 <div class="project-info">
                     <span>${data.title}</span>
                 </div>
+                <div class="project-tech">
+                    ${data.tech.map(tech => `<span>${tech}</span>`).join('')}
+                </div>
                 <div class="project-desc">${data.description}</div>
                 <menu class="project-link">
                     ${!data.link ? `` : `
                         <a href="${data.link}" target="_blank">
                             <span>Demo</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="hsl(163, 100%, 21%)">
                                 <path d="M120-120v-720h360v80H200v560h560v-280h80v360H120Zm268-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
                             </svg>
                         </a>
@@ -30,8 +33,8 @@ fetch('./assets/data/project.json')
                     ${!data.repolink ? `` : `
                         <a href="${data.repolink}" target="_blank">
                             <span>GitHub</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                                <path fill="currentColor" d="M120-120v-720h360v80H200v560h560v-280h80v360H120Zm268-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="hsl(163, 100%, 21%)">
+                                <path d="M120-120v-720h360v80H200v560h560v-280h80v360H120Zm268-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
                             </svg>
                         </a>
                     `}
