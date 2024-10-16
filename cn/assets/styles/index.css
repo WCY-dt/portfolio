@@ -112,6 +112,7 @@ h2::after {
 }
 
 @media (hover: hover) {
+
     h2:hover::before,
     h2:hover::after {
         background-color: var(--fac-color);

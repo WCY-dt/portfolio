@@ -1,0 +1,22 @@
+[
+    {
+        "category": "前端",
+        "item": ["html5", "css3", "javascript", "jquery", "react", "vuejs", "sass", "tailwindcss", "typescript", "webpack", "vitejs"
+        ]
+    },
+    {
+        "category": "后端",
+        "item": ["c", "cplusplus", "python", "rust", "go", "mysql", "sqlite", "cmake", "elasticsearch", "flask", "pytorch"
+        ]
+    },
+    {
+        "category": "全栈",
+        "item": ["nodejs", "qt", "electron", "tauri", "cloudflareworkers", "jekyll"
+        ]
+    },
+    {
+        "category": "工具",
+        "item": ["linux", "windows8", "powershell", "git", "github", "githubactions", "vim", "vscode", "docker", "cloudflare", "jupyter", "postman"
+        ]
+    }
+]

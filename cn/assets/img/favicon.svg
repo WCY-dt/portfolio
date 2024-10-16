@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <style>
+      .d {
+        fill: #016b4d;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="图层 1">
+    <rect class="d" width="180" height="180"/>
+  </g>
+</svg>

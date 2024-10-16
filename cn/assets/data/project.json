@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Easy Transfer",
+        "tech": ["Vue.js", "Nodejs", "WebRTC", "Socket.io", "WebCrypto"],
+        "description": "EasyTransfer is a free, anonymous, encrypted, and easy-to-use E2EE file transfer tool. You only need to visit a simple web page to connect to any device in any network using a device code.",
+        "link": "https://file.ch3nyang.top",
+        "repolink": "https://github.com/WCY-dt/EasyTransfer"
+    },
+    {
+        "title": "OpenSSL with SM4 quantum key",
+        "tech": ["C", "OpenSSL", "SM4", "Quantum Key"],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        "title": "MindClip",
+        "tech": ["NodeJS", "Cloudflare Workers", "ReactJS"],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "link": "https://mind.ch3nyng.top",
+        "repolink": "https://github.com/WCY-dt/mindclip"
+    },
+    {
+        "title": "MiniOS",
+        "tech": ["C", "Assembly"],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "repolink": "https://github.com/WCY-dt/MiniOS"
+    },
+    {
+        "title": "MrRSS",
+        "tech": ["Go", "Vue.js", "wails"],
+        "description": "An AI powered, cross-platform and lightweight RSS reader. It supports subscriptions to X (Twitter), Telegram, and WeChat public accounts.",
+        "link": "https://github.com/WCY-dt/MrRSS/releases",
+        "repolink": "https://github.com/WCY-dt/MrRSS"
+    }
+]

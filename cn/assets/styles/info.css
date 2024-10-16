@@ -1,0 +1,38 @@
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12rem auto 12rem auto;
+    padding: 0 3rem;
+}
+
+.info-content {
+    max-width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-text {
+    letter-spacing: 0.05rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.info-text u, .info-text a {
+    transition: color 0.25s ease-out;
+    color: var(--black-color);
+}
+
+@media (hover: hover) {
+    .info-text u:hover, .info-text a:hover {
+        background-color: var(--primary-color);
+        text-decoration: none;
+        color: var(--fac-color);
+    }
+}
