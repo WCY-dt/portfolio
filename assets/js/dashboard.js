@@ -31,35 +31,17 @@ async function getAllEvents(username) {
 }
 
 async function getCommits(events) {
-    let commitCount = 0;
-
-    const commits = events.filter(event => event.type === 'PushEvent');
-
-    commits.forEach(commit => {
-        commitCount += commit.payload.size;
-    });
-
-    return commitCount;
+    return events
+        .filter(event => event.type === 'PushEvent')
+        .reduce((count, event) => count + event.payload.size, 0);
 }
 
 async function getPullRequests(events) {
-    let pullRequestCount = 0;
-
-    const pullRequests = events.filter(event => event.type === 'PullRequestEvent');
-
-    pullRequestCount += pullRequests.length;
-
-    return pullRequestCount;
+    return events.filter(event => event.type === 'PullRequestEvent').length;
 }
 
 async function getIssues(events) {
-    let issueCount = 0;
-
-    const issues = events.filter(event => event.type === 'IssuesEvent' || event.type === 'IssueCommentEvent');
-
-    issueCount += issues.length;
-
-    return issueCount;
+    return events.filter(event => event.type === 'IssuesEvent' || event.type === 'IssueCommentEvent').length;
 }
 
 async function getFollowers(username) {
@@ -68,7 +50,6 @@ async function getFollowers(username) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-
         return data.followers;
     } catch (error) {
         console.error(error);
@@ -82,7 +63,6 @@ async function getAllRepos(username) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-
         return data;
     } catch (error) {
         console.error(error);
@@ -91,21 +71,11 @@ async function getAllRepos(username) {
 }
 
 async function getTotalStars(repos) {
-    let totalStars = 0;
-    repos.forEach(repo => {
-        totalStars += repo.stargazers_count;
-    });
-
-    return totalStars;
+    return repos.reduce((total, repo) => total + repo.stargazers_count, 0);
 }
 
 async function getTotalForks(repos) {
-    let totalForks = 0;
-    repos.forEach(repo => {
-        totalForks += repo.forks_count;
-    });
-
-    return totalForks;
+    return repos.reduce((total, repo) => total + repo.forks_count, 0);
 }
 
 const username = 'WCY-dt';
@@ -113,6 +83,9 @@ const username = 'WCY-dt';
 const commit = document.querySelector('#commit number');
 const pullRequest = document.querySelector('#pr number');
 const issue = document.querySelector('#issue number');
+const follower = document.querySelector('#follower number');
+const star = document.querySelector('#star number');
+const fork = document.querySelector('#fork number');
 
 getAllEvents(username).then(events => {
     getCommits(events).then(commitCount => {
@@ -126,16 +99,12 @@ getAllEvents(username).then(events => {
     getIssues(events).then(issueCount => {
         issue.textContent = issueCount;
     });
-})
+});
 
-const follower = document.querySelector('#follower number');
 getFollowers(username).then(followerCount => {
     follower.textContent = followerCount;
 });
 
-
-const star = document.querySelector('#star number');
-const fork = document.querySelector('#fork number');
 getAllRepos(username).then(repos => {
     getTotalStars(repos).then(starCount => {
         star.textContent = starCount;
@@ -145,5 +114,3 @@ getAllRepos(username).then(repos => {
         fork.textContent = forkCount;
     });
 });
-
-

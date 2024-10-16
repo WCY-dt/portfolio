@@ -33,10 +33,6 @@
     transition: transform 0.25s ease-in-out;
 }
 
-.footer ul li:hover {
-    transform: translateY(-0.25rem);
-}
-
 .footer ul li a {
     text-decoration: none;
     color: var(--fac-color);
@@ -54,4 +50,10 @@
 .footer-text {
     margin-top: 2rem;
     color: var(--white-color);
+}
+
+@media (hover: hover) {
+    .footer ul li:hover {
+        transform: translateY(-0.25rem);
+    }
 }

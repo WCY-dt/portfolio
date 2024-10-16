@@ -1,20 +1,13 @@
 .info {
-    width: 96vw;
-    height: 48vh;
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin: 0 auto 0 auto;
-}
-
-.smile img {
-    width: 16rem;
-    height: 16rem;
+    justify-content: center;
+    margin: 12rem auto 12rem auto;
+    padding: 0 3rem;
 }
 
 .info-content {
-    margin-left: 8rem;
-    width: 45rem;
+    max-width: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,91 +15,24 @@
     gap: 1rem;
 }
 
-.info-title {
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 900;
-    font-family: var(--primary-font);
-}
-
 .info-text {
     letter-spacing: 0.05rem;
     font-size: 1.5rem;
     line-height: 2.25rem;
+    text-align: justify;
     -webkit-hyphens: auto;
     hyphens: auto;
 }
 
-.info-text u {
+.info-text u, .info-text a {
     transition: color 0.25s ease-out;
+    color: var(--black-color);
 }
 
-.info-text u:hover {
-    background-color: var(--primary-color);
-    text-decoration: none;
-    color: var(--fac-color);
-}
-
-@keyframes smile-scroll {
-    0% {
-        transform: translateX(-100vw) rotate(-60deg) scale(0.5);
-    }
-
-    80% {
-        transform: translateX(0) rotate(0deg) scale(1);
-    }
-
-    90% {
-        transform: translateX(5vw) rotate(30deg) scale(1.05);
-    }
-
-    100% {
-        transform: translateX(0) rotate(0deg) scale(1);
-    }
-}
-
-.smile img {
-    view-timeline: scroll() block;
-    animation-timeline: view();
-    animation-name: smile-scroll;
-    animation-range: entry 0% contain 50%;
-    animation-fill-mode: forwards;
-}
-
-@keyframes info-title-scroll {
-    0% {
-        color: var(--black-color);
-    }
-
-    100% {
-        color: var(--primary-color);
-    }
-}
-
-.info-title {
-    view-timeline: scroll() block;
-    animation-timeline: view();
-    animation-name: info-title-scroll;
-    animation-range: entry 100% contain 75%;
-    animation-fill-mode: forwards;
-}
-
-@media screen and (max-width: 768px) {
-    .smile {
-        display: none;
-    }
-
-    .info {
-        justify-content: center;
-    }
-
-    .info-content {
-        margin-left: 0;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .info {
-        justify-content: center;
+@media (hover: hover) {
+    .info-text u:hover, .info-text a:hover {
+        background-color: var(--primary-color);
+        text-decoration: none;
+        color: var(--fac-color);
     }
 }

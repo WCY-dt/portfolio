@@ -1,7 +1,3 @@
-.white-img {
-    filter: invert(1);
-}
-
 .skill {
     width: 100%;
     background-color: var(--black-color);
@@ -11,7 +7,8 @@
     justify-content: center;
     align-items: start;
     gap: 3rem;
-    padding: 4rem 0 8rem 0;
+    padding: 0rem 0 8rem 0;
+    margin-top: 4rem;
     box-shadow: 0 -1rem 1rem var(--black-shadow-secondary-color), 0 -0.25rem 0.25rem var(--black-shadow-primary-color);
 }
 
@@ -22,11 +19,6 @@
 .skill h2::before,
 .skill h2::after {
     background-color: var(--fac-color);
-}
-
-.skill h2:hover::before,
-.skill h2:hover::after {
-    background-color: var(--primary-color);
 }
 
 .skill-title {
@@ -55,11 +47,11 @@
 .skill li img {
     width: 4rem;
     height: 4rem;
-    transition: transform 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
-.skill li img:hover {
-    transform: scale(0.9) rotate(10deg);
+.skill li .white-img {
+    filter: invert(1);
 }
 
 .skill hr {
@@ -68,44 +60,19 @@
     border: 0.0625rem solid var(--primary-color);
 }
 
-@keyframes skill-scroll {
-    from {
-        transform: translateY(50vh);
+@media (hover: hover) {
+    .skill h2:hover::before,
+    .skill h2:hover::after {
+        background-color: var(--primary-color);
     }
 
-    to {
-        transform: translateY(0);
-    }
-}
-
-.skill {
-    transform: translateY(50vh);
-    view-timeline: scroll() block;
-    animation-timeline: view();
-    animation-name: skill-scroll;
-    animation-range: entry 40% entry 90%;
-    animation-fill-mode: forwards;
-}
-
-@keyframes skill-element-scroll {
-    from {
-        opacity: 0;
+    .skill li img:hover {
+        filter: brightness(1.5);
     }
 
-    to {
-        opacity: 1;
+    .skill li .white-img:hover {
+        filter: invert(1) brightness(1.5);
     }
-}
-
-.skill-title,
-.skill ul,
-.skill hr {
-    opacity: 0;
-    view-timeline: scroll() block;
-    animation-timeline: view();
-    animation-name: skill-element-scroll;
-    animation-range: entry 50% contain 50%;
-    animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 768px) {

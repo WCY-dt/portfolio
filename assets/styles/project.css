@@ -33,18 +33,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    /*
-    box-sizing: border-box;
-    border: solid var(--white-color) 0.5rem;
-    */
     opacity: 0.5;
     transition: opacity 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
 .project-content .project-item:nth-child(3) {
-    /*
-    border: 0.25rem solid var(--primary-color);
-    */
     opacity: 1;
     z-index: 10;
     box-shadow: 0 0 0.5rem var(--black-shadow-primary-color), 0 0 2rem var(--black-shadow-secondary-color);
@@ -63,12 +56,12 @@
     color: var(--primary-color);
     padding: 1rem 0;
     text-transform: uppercase;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, font-weight 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .project-content .project-item:nth-child(3) .project-info {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--fac-color);
     font-weight: 900;
 }
 
@@ -83,7 +76,7 @@
     font-weight: 700;
     color: var(--primary-color);
     text-transform: uppercase;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .project-tech span {
@@ -102,7 +95,7 @@
     height: 100%;
     -webkit-hyphens: auto;
     hyphens: auto;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .project-content .project-item:nth-child(3) .project-desc {
@@ -128,11 +121,7 @@
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: underline;
-    transition: color 0.25s ease-in-out;
-}
-
-.project-link a:hover {
-    color: var(--primary-color);
+    transition: all 0.25s ease-in-out;
 }
 
 .project-content a svg {
@@ -140,11 +129,7 @@
     height: 2rem;
     color: var(--black-color);
     transform: translateY(0.5rem);
-    transition: color 0.25s ease-in-out;
-}
-
-.project-link a:hover svg {
-    color: var(--primary-color);
+    transition: all 0.25s ease-in-out;
 }
 
 .project-left,
@@ -183,5 +168,15 @@
     .project-content .project-item {
         max-width: 25rem;
         height: 40rem;
+    }
+}
+
+@media (hover: hover) {
+    .project-link a:hover {
+        color: var(--primary-color);
+    }
+
+    .project-link a:hover svg {
+        color: var(--primary-color);
     }
 }

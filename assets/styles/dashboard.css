@@ -27,11 +27,6 @@
     transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
-.dashboard-item:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 0 2rem var(--black-shadow-secondary-color);
-}
-
 .dashboard-item .icon {
     position: absolute;
     top: 0.5rem;
@@ -67,5 +62,12 @@
     .dashboard-item {
         width: 12rem;
         height: 9rem;
+    }
+}
+
+@media (hover: hover) {
+    .dashboard-item:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0 0 2rem var(--black-shadow-secondary-color);
     }
 }

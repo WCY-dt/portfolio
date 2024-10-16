@@ -7,27 +7,6 @@
 @import url('./project.css');
 @import url('./dashboard.css');
 @import url('./footer.css');
-@import url('./menu.css');
-
-/* :root {
-    --primary-color: hsl(225, 100%, 50%);
-    --secondary-color: hsl(200, 100%, 90%);
-    --tertiary-color: hsl(195, 100%, 95%);
-    --black-color: hsl(0, 0%, 0%);
-    --white-color: hsl(0, 0%, 100%);
-    --black-shadow-primary-color: hsla(0, 0%, 0%, 0.4);
-    --black-shadow-secondary-color: hsla(0, 0%, 0%, 0.2);
-    --blue-shadow-color: hsl(225, 100%, 70%);
-    --primary-font: "Orbitron", sans-serif;
-    --secondary-font: "Lora", serif;
-
-    font-size: 16px;
-    font-family: var(--secondary-font);
-
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-} */
 
 :root {
     --primary-color: hsl(163, 100%, 21%);
@@ -116,31 +95,9 @@ h2::after {
     right: -2.5rem;
 }
 
-h2:hover::before,
-h2:hover::after {
-    background-color: var(--fac-color);
-}
-
-@keyframes body-color {
-    0% {
-        background-color: var(--white-color);
+@media (hover: hover) {
+    h2:hover::before,
+    h2:hover::after {
+        background-color: var(--fac-color);
     }
-
-    50% {
-        background-color: var(--secondary-color);
-    }
-
-    750% {
-        background-color: var(--secondary-color);
-    }
-
-    100% {
-        background-color: var(--white-color);
-    }
-}
-
-body {
-    animation: body-color linear forwards;
-    animation-timeline: scroll();
-    animation-range: 50vh 250vh;
 }

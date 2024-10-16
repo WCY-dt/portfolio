@@ -27,30 +27,17 @@
 
 <body>
     <header class="home" id="home">
-        <div class="left">
-            <div class="left-square">
-                <div class="square-content">
-                </div>
-            </div>
-            <div class="subtitle">homepage of</div>
-            <div class="left-title">ch3n</div>
-        </div>
-        <div class="right">
-            <div class="right-square">
-                <div class="right-title">yang</div>
-                <div class="star">
-                    <img src="./assets/icons/asterisk.svg" alt="Asterisk" loading="eager">
-                </div>
+        <div class="home-content">
+            <img src="./assets/img/avatar-y.png" alt="Avatar" class="avatar">
+            <div class="home-title">
+                <span class="subtitle">Hello, I'm</span>
+                <span class="name">Ch3nyang</span>
             </div>
         </div>
     </header>
     <main class="info" id="info">
-        <div class="smile">
-            <img src="./assets/icons/smile.svg" alt="Smile" loading="eager">
-        </div>
         <div class="info-content">
-            <div class="info-title">Hi there!</div>
-            <div class="info-text">I'm Ch3nyang, a <u>fullstack developer</u> from Southeast University, China, currently pursuing a Master's degree in Cybersecurity. I'm passionate about programming, enjoy writing, and love sharing.</div>
+            <div class="info-text">I am a <u>full-stack developer</u> from China. I earned my bachelor’s degree in cyberspace security from <a href="https://www.seu.edu.cn/">Southeast University</a> and am currently pursuing a master’s degree. I have over ten years of programming experience and have worked on many interesting <a href="https://github.com/WCY-dt">open-source projects</a>. I also enjoy <a href="https://blog.ch3nyang.top">blogging</a> to share what I’ve learned and my thoughts with others.</div>
             <div class="info-text">Hope you enjoy yourself here!</div>
         </div>
     </main>
@@ -62,7 +49,7 @@
         <div class="link-content">
             <a class="link-cluster" href="https://blog.ch3nyang.top">
                 <div class="img">
-                    <img src="./assets/icons/bubbles.svg" alt="Bubbles" loading="lazy">
+                    <span class="material-symbols-sharp icon">rss_feed</span>
                 </div>
                 <div class="link-title">blog</div>
                 <div class="link-text">I have written blogs for years. Here you can find my notes on programming, cybersecurity, mathematics, signal processing, and life. Enjoy!</div>
@@ -76,17 +63,17 @@
             <div class="dashboard-item" id="commit">
                 <span class="material-symbols-sharp icon">commit</span>
                 <number>---</number>
-                <span class="dashboard-text">commits this month</span>
+                <span class="dashboard-text">commits last 30 days</span>
             </div>
             <div class="dashboard-item" id="pr">
                 <span class="material-symbols-sharp icon">merge</span>
                 <number>---</number>
-                <span class="dashboard-text">pull requests this month</span>
+                <span class="dashboard-text">pull requests last 30 days</span>
             </div>
             <div class="dashboard-item" id="issue">
                 <span class="material-symbols-sharp icon">chat</span>
                 <number>---</number>
-                <span class="dashboard-text">issues this month</span>
+                <span class="dashboard-text">issues last 30 days</span>
             </div>
             <div class="dashboard-item" id="follower">
                 <span class="material-symbols-sharp icon">group</span>
@@ -134,8 +121,7 @@
             </a></li>
         </ul>
         <div class="footer-text">
-            © 2024 Ch3nyang. All rights reserved.<br/>
-            Made with vanilla JS.
+            © 2024 Ch3nyang. All rights reserved.
         </div>
     </footer>
 <!--
