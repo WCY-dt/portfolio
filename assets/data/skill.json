@@ -1,22 +1,14 @@
 [
     {
         "category": "Frontend",
-        "item": ["html5", "css3", "javascript", "jquery", "react", "vuejs", "sass", "tailwindcss", "typescript", "webpack", "vitejs"
-        ]
+        "item": ["html5", "css3", "javascript", "typescript", "vuejs", "react"]
     },
     {
         "category": "Backend",
-        "item": ["c", "cplusplus", "python", "rust", "go", "mysql", "sqlite", "cmake", "elasticsearch", "flask", "pytorch"
-        ]
-    },
-    {
-        "category": "Fullstack",
-        "item": ["nodejs", "qt", "electron", "tauri", "cloudflareworkers", "jekyll"
-        ]
+        "item": ["c", "cplusplus", "python", "rust", "go", "nodejs"]
     },
     {
         "category": "Tools",
-        "item": ["linux", "windows8", "powershell", "git", "github", "githubactions", "vim", "vscode", "docker", "cloudflare", "jupyter", "postman"
-        ]
+        "item": ["linux", "windows8", "powershell", "git", "docker"]
     }
 ]
