@@ -124,7 +124,6 @@
             © 2024 Ch3nyang. All rights reserved.
         </div>
     </footer>
-    <a class="translate material-symbols-sharp" href="./cn">translate</a>
 </body>
 
 <script src="./assets/js/skill.js"></script>
@@ -132,5 +131,15 @@
 <script src="./assets/js/project.js"></script>
 <script src="./assets/js/dashboard.js"></script>
 <script src="./assets/js/menu.js"></script>
+
+<script src="./public/BlurGradientBg.min.js"></script>
+<script>
+    let colorbg = new Color4Bg.BlurGradientBg({
+        seed: Math.random(),
+        dom: "home",
+        colors: ["#11694E", "#48BF91", "#8FD9A8", "#15997A", "#01796F", "#11694E"],
+        loop: true
+    })
+</script>
 
 </html>
