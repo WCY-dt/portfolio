@@ -27,23 +27,35 @@
 
 <body>
     <header class="home" id="home">
-        <div class="home-content">
-            <img src="./assets/img/avatar-y.png" alt="Avatar" class="avatar">
-            <div class="home-title">
-                <span class="subtitle">Hello, I'm</span>
-                <span class="name">Ch3nyang</span>
+        <div class="home__content">
+            <div class="home__title">
+                <span class="home__subtitle">Hello, I'm</span>
+                <span class="home__name">Ch3nyang</span>
+            </div>
+            <div class="home__ask_ai">
+                <div class="home__search">
+                    <input class="home__input" type="text" placeholder="Ask AI about me..." id="ask_ai">
+                    <span class="home__button material-symbols-sharp">search</span>
+                </div>
+                <p class="home__answer" id="answer"></p>
             </div>
         </div>
+        <div class="home__scroll_down">
+            <span class="home__scroll_down__icon material-symbols-sharp">mouse</span>
+            <span class="home__scroll_down__text">scroll down</span>
+        </div>
     </header>
+
     <main class="info" id="info">
-        <div class="info-content">
-            <div class="info-text">I am a <u>full-stack developer</u> from China. I earned my bachelor’s degree in cyberspace security from <a href="https://www.seu.edu.cn/">Southeast University</a> and am currently pursuing a master’s degree. I have over ten years of programming experience and have worked on many interesting <a href="https://github.com/WCY-dt">open-source projects</a>. I also enjoy <a href="https://blog.ch3nyang.top">blogging</a> to share what I’ve learned and my thoughts with others.</div>
-            <div class="info-text">Hope you enjoy yourself here!</div>
+        <div class="info__content">
+            <div class="info__text">Here is Ch3nyang, a full-stack developer from China. He earned his bachelor’s degree in cyberspace security from Southeast University, China and is currently pursuing a master’s degree. He has almost ten years of programming experience and has worked on many interesting projects.</div>
         </div>
     </main>
+
     <section class="skill" id="skill">
         <h2>skill</h2>
     </section>
+
     <section class="link" id="link">
         <h2>link</h2>
         <div class="link-content">
@@ -134,7 +146,7 @@
 
 <script src="./public/BlurGradientBg.min.js"></script>
 <script>
-    let colorbg = new Color4Bg.BlurGradientBg({
+    let colorbg_home = new Color4Bg.BlurGradientBg({
         seed: Math.random(),
         dom: "home",
         colors: ["#11694E", "#48BF91", "#8FD9A8", "#15997A", "#01796F", "#11694E"],
