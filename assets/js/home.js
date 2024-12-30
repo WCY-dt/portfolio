@@ -15,7 +15,7 @@ function destroyBg() {
     }
 }
 
-let observer = new IntersectionObserver(function(entries) {
+let homeObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
         if (entry.isIntersecting) {
             generateBg()
@@ -25,4 +25,4 @@ let observer = new IntersectionObserver(function(entries) {
     })
 })
 
-observer.observe(document.getElementById('home'))
+homeObserver.observe(document.getElementById('home'))

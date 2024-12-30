@@ -12,12 +12,12 @@ function generateTyped() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let observer = new IntersectionObserver(function(entries) {
+    let infoObserver = new IntersectionObserver(function(entries) {
         if (entries[0].isIntersecting) {
             generateTyped()
-            observer.disconnect()
+            infoObserver.disconnect()
         }
     }, { threshold: 0.2 })
     
-    observer.observe(document.getElementById('info__text'))
+    infoObserver.observe(document.getElementById('info__text'))
 })

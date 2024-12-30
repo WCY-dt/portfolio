@@ -109,5 +109,19 @@ mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.
 mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
 World.add(world, mouseConstraint);
 
-Runner.run(engine);
-Render.run(render);
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // engine.enableSleeping = true;
+            engine.world.gravity.y = 0.5;
+            engine.world.gravity.x = 0;
+            Runner.run(engine);
+            Render.run(render);
+        } else {
+            Runner.stop(engine);
+            Render.stop(render);
+        }
+    });
+}, { threshold: 0.1 });
+
+skillObserver.observe(skillContent);
