@@ -1,205 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Homepage of Ch3nyang</title>
-    <meta name="description" content="Portfolio of Ch3nyang">
-    <meta name="keywords" content="homepage, portfolio, developer, program">
-    <meta name="author" content="Ch3nyang">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="application-name" content="Ch3nyang Homepage">
-    <meta name="msapplication-TileColor" content="#0040ff">
+    <meta name="description" content="Portfolio of Ch3nyang" />
+    <meta name="keywords" content="homepage, portfolio, developer, program" />
+    <meta name="author" content="Ch3nyang" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="application-name" content="Ch3nyang Homepage" />
+    <meta name="msapplication-TileColor" content="#0040ff" />
 
-    <meta property="og:title" content="Homepage of Ch3nyang">
-    <meta property="og:description" content="Portfolio of Ch3nyang">
+    <meta property="og:title" content="Homepage of Ch3nyang" />
+    <meta property="og:description" content="Portfolio of Ch3nyang" />
 
-    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
 
-    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/index.css" />
 
     <script src="./public/BlurGradientBg.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
-</head>
+    <!-- <script src="./public/BigBlobBg.min.js"></script> -->
+    <script src="./public/typed.umd.js"></script>
+    <script src="./public/pathseg.min.js"></script>
+    <script src="./public/decomp.min.js"></script>
+    <script src="./public/matter.min.js"></script>
+  </head>
 
-<body>
+  <body>
     <header class="home" id="home">
-        <div class="home__content">
-            <div class="home__title">
-                <span class="home__subtitle">Hello, I'm</span>
-                <span class="home__name">Ch3nyang</span>
-            </div>
-            <div class="home__ask_ai">
-                <div class="home__search">
-                    <input class="home__input" type="text" placeholder="Ask AI about me..." id="ask_ai">
-                    <span class="home__button material-symbols-sharp">search</span>
-                </div>
-                <p class="home__answer" id="home__answer"></p>
-            </div>
+      <div class="home__content">
+        <div class="home__title">
+          <span class="home__subtitle">Hello, I'm</span>
+          <span class="home__name">Ch3nyang</span>
         </div>
-        <div class="home__scroll_down">
-            <span class="home__scroll_down__icon material-symbols-sharp">mouse</span>
-            <span class="home__scroll_down__text">scroll down</span>
+        <div class="home__ask_ai">
+          <div class="home__search">
+            <input
+              class="home__input"
+              type="text"
+              placeholder="Ask AI about me..."
+              id="ask_ai"
+            />
+            <span class="home__button material-symbols-sharp">search</span>
+          </div>
+          <p class="home__answer" id="home__answer"></p>
         </div>
+      </div>
+      <div class="home__scroll_down">
+        <span class="home__scroll_down__icon material-symbols-sharp"
+          >mouse</span
+        >
+        <span class="home__scroll_down__text">scroll down</span>
+      </div>
     </header>
 
     <main class="info" id="info">
-        <div class="info__content">
-            <div class="info__typing">
-                <span class="info__text" id="info__text"></span>
-            </div>
-            <span class="info__text">I earned my bachelor’s degree in cyberspace security from <u>Southeast University, China</u> and am currently pursuing a master’s degree.</span>
-            <span class="info__text">I have almost <u>10</u> years of programming experience and have worked on many interesting projects.</span>
+      <div class="info__content">
+        <div class="info__typing">
+          <span class="info__text" id="info__text"></span>
         </div>
+        <span class="info__text"
+          >I earned my bachelor’s degree in cyberspace security from
+          <u>Southeast University, China</u> and am currently pursuing a
+          master’s degree.</span
+        >
+        <span class="info__text"
+          >I have almost <u>10</u> years of programming experience and have
+          worked on many interesting projects.</span
+        >
+      </div>
     </main>
 
+    <section class="contact" id="cantact">
+      <span class="contact__title">contact</span>
+      <div class="contact__content">
+        <a
+          class="contact__detail contact__detail_1"
+          href="mailto:mail@ch3nyang.top"
+        >
+          <div class="contact__marquee left">
+            <div class="contact__marquee_inner">
+              <svg
+                class="contact__img"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
+                />
+              </svg>
+              <span class="contact__name">Email</span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="contact__detail contact__detail_2"
+          href="https://github.com/WCY-dt"
+        >
+          <div class="contact__marquee right">
+            <div class="contact__marquee_inner">
+              <svg
+                class="contact__img"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <span class="contact__name">GitHub</span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="contact__detail contact__detail_3"
+          href="https://twitter.com/ch3nyang"
+        >
+          <div class="contact__marquee left">
+            <div class="contact__marquee_inner">
+              <svg
+                class="contact__img"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                />
+              </svg>
+              <span class="contact__name">Twitter</span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="contact__detail contact__detail_4"
+          href="https://blog.ch3nyang.top"
+        >
+          <div class="contact__marquee right">
+            <div class="contact__marquee_inner">
+              <svg
+                class="contact__img"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.025 0H22.05C23.1 0 24 .9 24 2.025v19.95C24 23.1 23.1 24 21.976 24zM12 3.975H9c-2.775 0-5.025 2.25-5.025 5.025v6c0 2.774 2.25 5.024 5.025 5.024h6c2.774 0 5.024-2.25 5.024-5.024v-3.975c0-.6-.45-1.05-1.05-1.05H18c-.524 0-.976-.45-.976-.976 0-2.776-2.25-5.026-5.024-5.026zm3.074 12H9c-.525 0-.975-.45-.975-.975s.45-.976.975-.976h6.074c.526 0 .977.45.977.976s-.45.976-.975.976zm-2.55-7.95c.527 0 .976.45.976.975s-.45.975-.975.975h-3.6c-.525 0-.976-.45-.976-.975s.45-.975.975-.975h3.6z"
+                />
+              </svg>
+              <span class="contact__name">Blog</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section class="skill" id="skill">
-        <span class="skill__title">SKILL</span>
-        <div class="skill__content">
-            <img class="skill__img" src="/assets/img/skill/c.png" alt="C icon">
-            <img class="skill__img" src="/assets/img/skill/cloudflare.png" alt="Cloudflare icon">
-            <img class="skill__img" src="/assets/img/skill/cmake.png" alt="CMake icon">
-            <img class="skill__img" src="/assets/img/skill/cplusplus.png" alt="C++ icon">
-            <img class="skill__img" src="/assets/img/skill/css3.png" alt="CSS3 icon">
-            <img class="skill__img" src="/assets/img/skill/debian.png" alt="Debian icon">
-            <img class="skill__img" src="/assets/img/skill/denojs.png" alt="Deno.js icon">
-            <img class="skill__img" src="/assets/img/skill/django.png" alt="Django icon">
-            <img class="skill__img" src="/assets/img/skill/docker.png" alt="Docker icon">
-            <img class="skill__img" src="/assets/img/skill/electron.png" alt="Electron icon">
-            <img class="skill__img" src="/assets/img/skill/flask.png" alt="Flask icon">
-            <img class="skill__img" src="/assets/img/skill/git.png" alt="Git icon">
-            <img class="skill__img" src="/assets/img/skill/github.png" alt="GitHub icon">
-            <img class="skill__img" src="/assets/img/skill/go.png" alt="Go icon">
-            <img class="skill__img" src="/assets/img/skill/graphql.png" alt="GraphQL icon">
-            <img class="skill__img" src="/assets/img/skill/html5.png" alt="HTML5 icon">
-            <img class="skill__img" src="/assets/img/skill/javascript.png" alt="JavaScript icon">
-            <img class="skill__img" src="/assets/img/skill/jekyll.png" alt="Jekyll icon">
-            <img class="skill__img" src="/assets/img/skill/jquery.png" alt="jQuery icon">
-            <img class="skill__img" src="/assets/img/skill/linux.png" alt="Linux icon">
-            <img class="skill__img" src="/assets/img/skill/markdown.png" alt="Markdown icon">
-            <img class="skill__img" src="/assets/img/skill/matlab.png" alt="MATLAB icon">
-            <img class="skill__img" src="/assets/img/skill/mysql.png" alt="MySQL icon">
-            <img class="skill__img" src="/assets/img/skill/nginx.png" alt="Nginx icon">
-            <img class="skill__img" src="/assets/img/skill/nodejs.png" alt="Node.js icon">
-            <img class="skill__img" src="/assets/img/skill/npm.png" alt="npm icon">
-            <img class="skill__img" src="/assets/img/skill/postman.png" alt="Postman icon">
-            <img class="skill__img" src="/assets/img/skill/powershell.png" alt="PowerShell icon">
-            <img class="skill__img" src="/assets/img/skill/python.png" alt="Python icon">
-            <img class="skill__img" src="/assets/img/skill/qt.png" alt="Qt icon">
-            <img class="skill__img" src="/assets/img/skill/raspberrypi.png" alt="Raspberry Pi icon">
-            <img class="skill__img" src="/assets/img/skill/react.png" alt="React icon">
-            <img class="skill__img" src="/assets/img/skill/redis.png" alt="Redis icon">
-            <img class="skill__img" src="/assets/img/skill/rust.png" alt="Rust icon">
-            <img class="skill__img" src="/assets/img/skill/sass.png" alt="Sass icon">
-            <img class="skill__img" src="/assets/img/skill/tauri.png" alt="Tauri icon">
-            <img class="skill__img" src="/assets/img/skill/typescript.png" alt="TypeScript icon">
-            <img class="skill__img" src="/assets/img/skill/ubuntu.png" alt="Ubuntu icon">
-            <img class="skill__img" src="/assets/img/skill/vim.png" alt="Vim icon">
-            <img class="skill__img" src="/assets/img/skill/vitejs.png" alt="Vite.js icon">
-            <img class="skill__img" src="/assets/img/skill/vscode.png" alt="VSCode icon">
-            <img class="skill__img" src="/assets/img/skill/vuejs.png" alt="Vue.js icon">
-            <img class="skill__img" src="/assets/img/skill/windowsl.png" alt="Windows icon">
-        </div>
+      <span class="skill__title">SKILL</span>
+      <div class="skill__content">
+        <img class="skill__img" src="/assets/img/skill/c.png" alt="C icon" />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/cloudflare.png"
+          alt="Cloudflare icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/cmake.png"
+          alt="CMake icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/cplusplus.png"
+          alt="C++ icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/css3.png"
+          alt="CSS3 icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/debian.png"
+          alt="Debian icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/denojs.png"
+          alt="Deno.js icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/django.png"
+          alt="Django icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/docker.png"
+          alt="Docker icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/electron.png"
+          alt="Electron icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/flask.png"
+          alt="Flask icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/git.png"
+          alt="Git icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/github.png"
+          alt="GitHub icon"
+        />
+        <img class="skill__img" src="/assets/img/skill/go.png" alt="Go icon" />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/graphql.png"
+          alt="GraphQL icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/html5.png"
+          alt="HTML5 icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/javascript.png"
+          alt="JavaScript icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/jekyll.png"
+          alt="Jekyll icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/jquery.png"
+          alt="jQuery icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/linux.png"
+          alt="Linux icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/markdown.png"
+          alt="Markdown icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/matlab.png"
+          alt="MATLAB icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/mysql.png"
+          alt="MySQL icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/nginx.png"
+          alt="Nginx icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/nodejs.png"
+          alt="Node.js icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/npm.png"
+          alt="npm icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/postman.png"
+          alt="Postman icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/powershell.png"
+          alt="PowerShell icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/python.png"
+          alt="Python icon"
+        />
+        <img class="skill__img" src="/assets/img/skill/qt.png" alt="Qt icon" />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/raspberrypi.png"
+          alt="Raspberry Pi icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/react.png"
+          alt="React icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/redis.png"
+          alt="Redis icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/rust.png"
+          alt="Rust icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/sass.png"
+          alt="Sass icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/tauri.png"
+          alt="Tauri icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/typescript.png"
+          alt="TypeScript icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/ubuntu.png"
+          alt="Ubuntu icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/vim.png"
+          alt="Vim icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/vitejs.png"
+          alt="Vite.js icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/vscode.png"
+          alt="VSCode icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/vuejs.png"
+          alt="Vue.js icon"
+        />
+        <img
+          class="skill__img"
+          src="/assets/img/skill/windowsl.png"
+          alt="Windows icon"
+        />
+      </div>
     </section>
+  </body>
 
-    <section class="link" id="link">
-        <h2>link</h2>
-        <div class="link-content">
-            <a class="link-cluster" href="https://blog.ch3nyang.top">
-                <div class="img">
-                    <span class="material-symbols-sharp icon">rss_feed</span>
-                </div>
-                <div class="link-title">blog</div>
-                <div class="link-text">I have written blogs for years. Here you can find my notes on programming, cybersecurity, mathematics, signal processing, and life. Enjoy!</div>
-            </a>
-            <div class="blog-cluster" id="blog-cluster"></div>
-        </div>
-    </section>
-    <section class="dashboard" id="dashboard">
-        <h2>dashboard</h2>
-        <div class="dashboard-content">
-            <div class="dashboard-item" id="commit">
-                <span class="material-symbols-sharp icon">commit</span>
-                <number>---</number>
-                <span class="dashboard-text">commits last 30 days</span>
-            </div>
-            <div class="dashboard-item" id="pr">
-                <span class="material-symbols-sharp icon">merge</span>
-                <number>---</number>
-                <span class="dashboard-text">pull requests last 30 days</span>
-            </div>
-            <div class="dashboard-item" id="issue">
-                <span class="material-symbols-sharp icon">chat</span>
-                <number>---</number>
-                <span class="dashboard-text">issues last 30 days</span>
-            </div>
-            <div class="dashboard-item" id="follower">
-                <span class="material-symbols-sharp icon">group</span>
-                <number>---</number>
-                <span class="dashboard-text">followers in total</span>
-            </div>
-            <div class="dashboard-item" id="star">
-                <span class="material-symbols-sharp icon">star</span>
-                <number>---</number>
-                <span class="dashboard-text">stars in total</span>
-            </div>
-            <div class="dashboard-item" id="fork">
-                <span class="material-symbols-sharp icon">fork_right</span>
-                <number>---</number>
-                <span class="dashboard-text">forks in total</span>
-            </div>
-        </div>
-    </section>
-    <section class="project" id="project">
-        <h2>project</h2>
-        <div class="project-content" id="project-content"></div>
-        <button class="material-symbols-sharp project-left" id="project-left">
-            arrow_back
-        </button>
-        <button class="material-symbols-sharp project-right" id="project-right">
-            arrow_forward
-        </button>
-    </section>
-    <footer class="footer" id="footer">
-        <div class="job">
-            available for hire currently!
-        </div>
-        <ul>
-            <li><a href="https://github.com/WCY-dt">
-                <img src="./assets/icons/github.svg" alt="GitHub icon">
-                <figcaption>GitHub</figcaption>
-            </a></li>
-            <li><a href="mailto:mail@ch3nyang.top">
-                <img src="./assets/icons/email.svg" alt="Email icon">
-                <figcaption>Email</figcaption>
-            </a></li>
-            <li><a href="https://twitter.com/ch3nyang">
-                <img src="./assets/icons/twitter.svg" alt="Twitter icon">
-                <figcaption>Twitter</figcaption>
-            </a></li>
-        </ul>
-        <div class="footer-text">
-            © 2024 Ch3nyang. All rights reserved.
-        </div>
-    </footer>
-</body>
-
-<script src="./assets/js/index.js"></script>
-<script src="./assets/js/home.js"></script>
-<script src="./assets/js/info.js"></script>
-<script src="./assets/js/skill.js"></script>
-<script src="./assets/js/link.js"></script>
-<script src="./assets/js/project.js"></script>
-<script src="./assets/js/dashboard.js"></script>
-<script src="./assets/js/menu.js"></script>
-
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/info.js"></script>
+  <script src="./assets/js/contact.js"></script>
+  <script src="./assets/js/skill.js"></script>
 </html>

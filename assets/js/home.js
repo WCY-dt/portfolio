@@ -1,6 +1,6 @@
 let colorbg_home = null
 
-function generateBg() {
+function generateHomeBg() {
     colorbg_home = new Color4Bg.BlurGradientBg({
         seed: Math.random(),
         dom: "home",
@@ -9,7 +9,7 @@ function generateBg() {
     })
 }
 
-function destroyBg() {
+function destroyHomeBg() {
     if (colorbg_home) {
         colorbg_home.destroy()
     }
@@ -18,9 +18,9 @@ function destroyBg() {
 let homeObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-            generateBg()
+            generateHomeBg()
         } else {
-            destroyBg()
+            destroyHomeBg()
         }
     })
 })

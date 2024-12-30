@@ -2,11 +2,11 @@
 
 @import url('./home.css');
 @import url('./info.css');
+@import url('./contact.css');
 @import url('./skill.css');
 @import url('./link.css');
 @import url('./project.css');
 @import url('./dashboard.css');
-@import url('./footer.css');
 
 :root {
     --primary-color: hsl(163, 100%, 21%);
