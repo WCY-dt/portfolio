@@ -23,6 +23,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="./assets/styles/index.css">
+
+    <script src="./public/BlurGradientBg.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -37,7 +40,7 @@
                     <input class="home__input" type="text" placeholder="Ask AI about me..." id="ask_ai">
                     <span class="home__button material-symbols-sharp">search</span>
                 </div>
-                <p class="home__answer" id="answer"></p>
+                <p class="home__answer" id="home__answer"></p>
             </div>
         </div>
         <div class="home__scroll_down">
@@ -48,7 +51,11 @@
 
     <main class="info" id="info">
         <div class="info__content">
-            <div class="info__text">Here is Ch3nyang, a full-stack developer from China. He earned his bachelor’s degree in cyberspace security from Southeast University, China and is currently pursuing a master’s degree. He has almost ten years of programming experience and has worked on many interesting projects.</div>
+            <div class="info__typing">
+                <span class="info__text" id="info__text"></span>
+            </div>
+            <span class="info__text">I earned my bachelor’s degree in cyberspace security from <u>Southeast University, China</u> and am currently pursuing a master’s degree.</span>
+            <span class="info__text">I have almost <u>10</u> years of programming experience and have worked on many interesting projects.</span>
         </div>
     </main>
 
@@ -138,20 +145,12 @@
     </footer>
 </body>
 
+<script src="./assets/js/home.js"></script>
+<script src="./assets/js/info.js"></script>
 <script src="./assets/js/skill.js"></script>
 <script src="./assets/js/link.js"></script>
 <script src="./assets/js/project.js"></script>
 <script src="./assets/js/dashboard.js"></script>
 <script src="./assets/js/menu.js"></script>
-
-<script src="./public/BlurGradientBg.min.js"></script>
-<script>
-    let colorbg_home = new Color4Bg.BlurGradientBg({
-        seed: Math.random(),
-        dom: "home",
-        colors: ["#11694E", "#48BF91", "#8FD9A8", "#15997A", "#01796F", "#11694E"],
-        loop: true
-    })
-</script>
 
 </html>

@@ -2,31 +2,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 12rem auto 12rem auto;
-    padding: 0 3rem;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(17, 105, 79, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
 .info__content {
-    max-width: 45rem;
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
+    margin: 12rem auto 12rem auto;
+    width: 45rem;
 }
 
 .info__text {
+    display: inline;
     letter-spacing: 0.05rem;
     font-size: 1.5rem;
     line-height: 2.25rem;
-    text-align: justify;
-    -webkit-hyphens: auto;
-    hyphens: auto;
 }
 
-.info__text::first-letter {
-    float: left;
-    font-size: 3rem;
+.info__text u {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgb(17, 105, 79);
+}
+
+.typed-cursor {
+    font-size: 1.5rem;
     line-height: 2.25rem;
-    padding-right: 0.1rem;
+    font-weight: 900;
+    color: rgb(17, 105, 79);
 }
