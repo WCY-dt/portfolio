@@ -44,7 +44,8 @@
     gap: 1rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    width: 400px;
+    padding: 1rem;
+    width: calc(min(100% - 2rem, 400px));
 }
 
 .home__search {
@@ -65,6 +66,7 @@
     border-radius: 0.5rem 0 0 0.5rem;
     background-color: rgba(255, 255, 255, 0.05);
     color: rgb(17, 105, 79);
+    height: 2.5rem;
 }
 
 .home__input::placeholder {
@@ -77,6 +79,7 @@
     background-color: rgba(17, 105, 79, 0.1);
     color: rgb(17, 105, 79);
     cursor: pointer;
+    height: 2.5rem;
 }
 
 .home__answer {
