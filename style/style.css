@@ -10,11 +10,17 @@ body {
 }
 
 .header__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     height: 90px;
+    background-color: white;
 }
 
 .header__wrapper svg {
@@ -39,6 +45,7 @@ body {
 .header__link a {
     width: calc(100% / 3);
     color: black;
+    border-bottom: 2px solid #ddd;
 }
 
 .header__link a:not(:last-child) {
@@ -79,9 +86,9 @@ body {
     display: grid;
     place-items: center;
     grid-template-columns: auto auto;
-    margin: -2vw auto 5vw auto;
+    margin: min(15vw, 300px) auto min(15vw, 300px) auto;
     font-family: "Impact", sans-serif;
-    font-size: 23.5vw;
+    font-size: min(23.5vw, 288px);
     letter-spacing: 0;
     text-align: center;
     font-weight: 900;
@@ -152,6 +159,7 @@ body {
     border-top: 2px solid #d74514;
     background-color: #f8ccb9;
     padding-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 .tab__wrapper img {
@@ -321,6 +329,14 @@ footer {
         width: 75%;
     }
 
+    .title__wrapper {
+        margin: 30vw auto 30vw auto;
+    }
+
+    .tech__wrapper {
+        margin-bottom: 80px;
+    }
+
     .tech__wrapper svg {
         height: 10vw;
     }
@@ -332,6 +348,7 @@ footer {
     }
 
     .title__wrapper {
+        margin: 45vw auto 30vw auto;
         grid-template-columns: auto;
         font-size: 44vw;
     }
@@ -348,6 +365,10 @@ footer {
     .title__chen::first-letter,
     .title__yang::first-letter {
         color: #d74514;
+    }
+
+    .tech__wrapper {
+        margin-bottom: 80px;
     }
 
     .tech__wrapper svg {
@@ -375,7 +396,7 @@ footer {
     }
 
     .exp__wrapper {
-        margin: 40px auto;
+        margin: 80px auto;
     }
 
     .exp__item {
@@ -396,13 +417,21 @@ footer {
         font-size: 16px;
     }
 
+    .title__wrapper {
+        margin: 60vw auto 30vw auto;
+    }
+
     .tab__links a svg {
         height: 20px;
         width: 20px;
     }
 
+    .tech__wrapper {
+        margin-bottom: 40px;
+    }
+
     .exp__wrapper {
-        margin: 20px auto;
+        margin: 40px auto;
         gap: 20px;
     }
 
