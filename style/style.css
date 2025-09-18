@@ -52,6 +52,7 @@ body {
     width: calc(100% / 3);
     color: black;
     border-bottom: 2px solid #ddd;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .header__link a svg {
@@ -63,8 +64,10 @@ body {
     border-right: 2px solid #ddd;
 }
 
-.header__link a:hover {
-    background-color: #ddd;
+@media (hover: hover) {
+    .header__link a:hover {
+        background-color: #ddd;
+    }
 }
 
 .header__email {
@@ -76,20 +79,24 @@ body {
     background-color: #f8ccb9;
     color: #d74514;
     font-weight: 900;
+    transition: all 0.3s ease-in-out;
 }
 
 .header__email svg {
     height: 40%;
     fill: #d74514;
+    transition: fill 0.3s ease-in-out;
 }
 
-.header__email:hover {
-    color: white;
-    background-color: #d74514;
-}
+@media (hover: hover) {
+    .header__email:hover {
+        color: white;
+        background-color: #d74514;
+    }
 
-.header__email:hover svg {
-    fill: white;
+    .header__email:hover svg {
+        fill: white;
+    }
 }
 
 .title__wrapper {
@@ -102,6 +109,13 @@ body {
     letter-spacing: 0;
     text-align: center;
     font-weight: 900;
+    transition: color 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .title__wrapper:hover {
+        color: #d74514;
+    }
 }
 
 .title__chen {
@@ -112,8 +126,7 @@ body {
     place-self: start;
 }
 
-.title__chen::first-letter,
-.title__yang::first-letter {
+.title__chen::first-letter {
     color: #d74514;
 }
 
@@ -166,6 +179,13 @@ body {
     border-radius: 50%;
     grid-column: 1;
     justify-self: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .exp__item:hover .exp__title::before {
+        background-color: #d74514;
+    }
 }
 
 .exp__date {
@@ -215,6 +235,13 @@ footer {
 
 .footer__divider a {
     color: white;
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .footer__divider a:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__wrapper p {
